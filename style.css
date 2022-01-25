@@ -64,6 +64,14 @@ img{
     .container1{
         grid-template-columns: 1fr;
     }
+    .fab{
+        margin-left: 2vw;
+        cursor: pointer;
+    }
+    .fas{
+        margin-left: 1vw;
+        cursor: pointer;
+    }
 }
 
 
