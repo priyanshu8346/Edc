@@ -1,77 +1,65 @@
-/* *{
-    padding: 0;
-    margin: 0;
-} */
-.welcome{
+.welcome {
+  display: flex;
+  justify-content: center;
+}
+h1 {
+  font-family: "Poppins", sans-serif;
+}
+.container1 {
+  display: grid;
+  width: 80vw;
 
-    display: flex;
-    justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  column-gap: 8px;
+  row-gap: 48px;
 }
-h1{
-    font-family: 'Poppins', sans-serif;
+.team {
+  background-color: rgb(188 208 219);
+  /* height: 1fr; */
+  border: 2px solid blanchedalmond;
+  border-radius: 10px;
 }
-.container1{
-    display: grid;
-    width: 80vw;
-    /* height: 100vh; */
-    background-color:  white;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows:1fr 1fr 1fr ;
-    column-gap: 8px;
-    row-gap: 48px;
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 8vh;
 }
-.team{
-    background-color:  rgb(188 208 219);
-    /* height: 1fr; */
-    border: 2px solid black;
-    border-radius: 10px;
+img {
+  height: 25vh;
 }
-.container{
-display: flex;
-justify-content: center;
-margin-top: 8vh;
+.image {
+  display: flex;
+  justify-content: center;
+  margin-top: 1vh;
 }
-img{
-    height: 25vh;
-    /* width: 15vw; */
-    
-}
-.image{
-    display: flex;
-    justify-content: center;
-    margin-top: 1vh;
-}
-.position{
-    text-align: center;
+.position {
+  text-align: center;
   color: brown;
 }
-.name{
-    margin: 1vh;
-    text-align: center;
+.name {
+  margin: 1vh;
+  text-align: center;
 }
-.fab{
-    margin-left: 0.5vw;
+.fab {
+  margin-left: 0.5vw;
+  cursor: pointer;
+}
+.fas {
+  margin-left: 0.3vw;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .container1 {
+    grid-template-columns: 1fr;
+  }
+  .fab {
+    margin-left: 2vw;
     cursor: pointer;
-}
-.fas{
-    margin-left: 0.3vw;
+  }
+  .fas {
+    margin-left: 1vw;
     cursor: pointer;
+  }
 }
-
-
-@media screen and (max-width:600px){
-   
-    .container1{
-        grid-template-columns: 1fr;
-    }
-    .fab{
-        margin-left: 2vw;
-        cursor: pointer;
-    }
-    .fas{
-        margin-left: 1vw;
-        cursor: pointer;
-    }
-}
-
-
