@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .welcome {
   display: flex;
   justify-content: center;
@@ -5,28 +9,29 @@
 h1 {
   font-family: "Poppins", sans-serif;
 }
+
 .container1 {
-  display: grid;
-  width: 80vw;
-
-  grid-template-columns: 1fr 1fr 1fr;
-
-  column-gap: 8px;
-  row-gap: 48px;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.container {
+  margin-top: 8vh;
+  margin: auto;
 }
 .team {
   background-color: rgb(188 208 219);
-  /* height: 1fr; */
   border: 2px solid blanchedalmond;
   border-radius: 10px;
-}
-.container {
-  display: flex;
-  justify-content: center;
-  margin-top: 8vh;
+  width: 28%;
+  margin: 2%;
 }
 img {
   height: 25vh;
+  width: 90%;
+  max-width: 200px;
 }
 .image {
   display: flex;
@@ -50,9 +55,45 @@ img {
   cursor: pointer;
 }
 
+/* web team data  */
+.web-team {
+  background-color: black;
+  width: 100vw;
+  margin: auto;
+}
+.web-team-heading {
+  text-align: center;
+  color: white;
+}
+.team1 {
+  background-color: rgb(22 87 110 / 49%);
+  /* height: 1fr; */
+  border: 10px solid #e496adbd;
+  width: 28%;
+  margin: 2%;
+}
+.name1 {
+  color: white;
+  text-align: center;
+}
+
+
+/* responsive */
 @media screen and (max-width: 600px) {
   .container1 {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+  .team1 {
+    width: 80%;
+    margin: 2%;
+  }
+  .team {
+    width: 80%;
+    margin: 2%;
   }
   .fab {
     margin-left: 2vw;
