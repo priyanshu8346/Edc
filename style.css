@@ -43,8 +43,9 @@ img {
   color: brown;
 }
 .name {
-  margin: 1vh;
+  margin: 1vh 0 2vh 0;
   text-align: center;
+  font-size: large;
 }
 .fab {
   margin-left: 0.5vw;
@@ -74,7 +75,16 @@ img {
 }
 .name1 {
   color: white;
+  margin: 1vh 0 2vh 0;
   text-align: center;
+  font-size: large;
+}
+/* hover effects */
+.fab:hover {
+  font-size: x-large;
+}
+.fas:hover{
+  font-size: x-large;
 }
 
 
