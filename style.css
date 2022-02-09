@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .welcome {
@@ -16,6 +17,7 @@ h1 {
   justify-content: space-around;
   align-items: center;
   width: 100%;
+  position: relative;
 }
 .container {
   margin-top: 8vh;
@@ -27,26 +29,49 @@ h1 {
   border-radius: 10px;
   width: 28%;
   margin: 2%;
+  position: relative;
+  transition: 0.6s ease-out;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.5);
 }
-img {
-  height: 25vh;
-  width: 90%;
+.team img{ 
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  left: 0;
+  object-fit: cover;
   max-width: 200px;
-}
+} 
+
 .image {
   display: flex;
   justify-content: center;
   margin-top: 1vh;
+  
 }
 .position {
-  text-align: center;
-  color: brown;
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: .5s;
+  left: 20px;
+  display: none;
+ font-size: large;
 }
-.name {
-  margin: 1vh 0 2vh 0;
-  text-align: center;
+.name{
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: .5s;
+  left: 20px;
+  display: none;
   font-size: large;
 }
+
 .fab {
   margin-left: 0.5vw;
   cursor: pointer;
@@ -67,16 +92,33 @@ img {
   color: white;
 }
 .team1 {
-  background-color: rgb(22 87 110 / 49%);
-  /* height: 1fr; */
-  border: 10px solid #e496adbd;
+  background-color: rgb(74 89 98);
+  border-radius: 5px;
   width: 28%;
   margin: 2%;
+  position: relative;
+  box-shadow: 0 3px 11px rgba(119, 114, 114, 0.5);
 }
+
+.team1 img{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  max-width: 200px;
+}
+
+
 .name1 {
-  color: white;
-  margin: 1vh 0 2vh 0;
-  text-align: center;
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: .5s;
+  left: 20px;
+  display: none;
   font-size: large;
 }
 /* hover effects */
@@ -86,6 +128,67 @@ img {
 .fas:hover{
   font-size: x-large;
 }
+.team:hover{
+  transform: translateY(10px);
+}
+.team:hover::before{
+  opacity: 1;
+}
+.team:hover .position {
+  opacity: 1;
+  display: block;
+  transform: translateY(-60px);
+}
+.team:hover .name {
+  opacity: 1;
+  display: block;
+  transform: translateY(-40px);
+}
+.team::before{
+content: '';
+position: absolute;
+top:0;
+left: 0;
+display: block;
+width: 100%;
+height: 100%;
+background: linear-gradient(to top,#000,transparent);
+z-index:2;
+transition: 0.5s;
+opacity: 0;
+}
+.team1:hover{
+  transform: translateY(10px);
+}
+.team1:hover::before{
+  opacity: 1;
+}
+.team1:hover .position {
+  opacity: 1;
+  display: block;
+  transform: translateY(-60px);
+}
+.team1:hover .name1 {
+  opacity: 1;
+  display: block;
+  transform: translateY(-40px);
+}
+.team1::before{
+content: '';
+position: absolute;
+top:0;
+left: 0;
+display: block;
+width: 100%;
+height: 100%;
+background: linear-gradient(to top,#000,transparent);
+z-index:2;
+transition: 0.5s;
+opacity: 0;
+}
+
+
+
 
 
 /* responsive */
@@ -100,10 +203,14 @@ img {
   .team1 {
     width: 80%;
     margin: 2%;
+    position: relative;
+    box-shadow: 0 3px 11px rgb(251 248 248 / 50%);
   }
   .team {
     width: 80%;
     margin: 2%;
+    position: relative;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.5);
   }
   .fab {
     margin-left: 2vw;
