@@ -7,8 +7,10 @@
   display: flex;
   justify-content: center;
 }
+
 h1 {
   font-family: "Poppins", sans-serif;
+  
 }
 
 .container1 {
@@ -26,7 +28,7 @@ h1 {
 .team {
   background-color: rgb(188 208 219);
   border: 2px solid blanchedalmond;
-  border-radius: 10px;
+  border-radius: 50%/10%;
   width: 28%;
   margin: 2%;
   position: relative;
@@ -93,7 +95,7 @@ h1 {
 }
 .team1 {
   background-color: rgb(74 89 98);
-  border-radius: 5px;
+  border-radius: 50%/10%;
   width: 28%;
   margin: 2%;
   position: relative;
